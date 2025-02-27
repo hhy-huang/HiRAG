@@ -1,0 +1,629 @@
+[
+    {
+        "query": "Who is the individual associated with the cryptocurrency industry facing a criminal trial on fraud and conspiracy charges, as reported by both The Verge and TechCrunch, and is accused by prosecutors of committing fraud for personal gain?",
+        "answer": "Sam Bankman-Fried",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "The FTX trial is bigger than Sam Bankman-Fried",
+                "author": "Elizabeth Lopatto",
+                "url": "https://www.theverge.com/2023/9/28/23893269/ftx-sam-bankman-fried-trial-evidence-crypto",
+                "source": "The Verge",
+                "category": "technology",
+                "published_at": "2023-09-28T12:00:00+00:00",
+                "fact": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto \u2014 the trustworthy face of a sometimes-shady industry."
+            },
+            {
+                "title": "SBF\u2019s trial starts soon, but how did he \u2014 and FTX \u2014 get here?",
+                "author": "Jacquelyn Melinek",
+                "url": "https://techcrunch.com/2023/10/01/ftx-lawsuit-timeline/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-01T14:00:29+00:00",
+                "fact": "The highly anticipated criminal trial for Sam Bankman-Fried, former CEO of bankrupt crypto exchange FTX, started Tuesday to determine whether he\u2019s guilty of seven counts of fraud and conspiracy."
+            },
+            {
+                "title": "Sam Altman backs teens\u2019 startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier",
+                "author": "Kyle Wiggers",
+                "url": "https://techcrunch.com/2023/10/07/sam-altman-backs-a-teens-startup-google-unveils-the-pixel-8-and-tiktok-tests-an-ad-free-tier/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-07T20:15:26+00:00",
+                "fact": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+            }
+        ]
+    },
+    {
+        "query": "Which individual is implicated in both inflating the value of a Manhattan apartment to a figure not yet achieved in New York City's real estate history, according to 'Fortune', and is also accused of adjusting this apartment's valuation to compensate for a loss in another asset's worth, as reported by 'The Age'?",
+        "answer": "Donald Trump",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "Donald Trump defrauded banks with 'fantasy' to build his real estate empire, judge rules in a major repudiation against the former president",
+                "author": "Michael R. Sisak, The Associated Press",
+                "url": "https://fortune.com/2023/09/26/donald-trump-fraud-banks-insurers-real-estate-judge-new-york/",
+                "source": "Fortune",
+                "category": "business",
+                "published_at": "2023-09-26T21:11:15+00:00",
+                "fact": "No apartment in New York City has ever sold for close to that amount, James said."
+            },
+            {
+                "title": "The $777 million surprise: Donald Trump is getting richer",
+                "author": "Tom Maloney",
+                "url": "https://www.theage.com.au/business/companies/the-777-million-surprise-donald-trump-is-getting-richer-20231108-p5eicf.html?ref=rss&utm_medium=rss&utm_source=rss_business",
+                "source": "The Age",
+                "category": "business",
+                "published_at": "2023-11-07T22:22:05+00:00",
+                "fact": "The prosecution argues that was to mask a drop in the value of one of his other properties."
+            }
+        ]
+    },
+    {
+        "query": "Who is the figure associated with generative AI technology whose departure from OpenAI was considered shocking according to Fortune, and is also the subject of a prevailing theory suggesting a lack of full truthfulness with the board as reported by TechCrunch?",
+        "answer": "Sam Altman",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did'",
+                "author": "Matt O'Brien, The Associated Press",
+                "url": "https://fortune.com/2023/11/18/how-did-openai-fire-sam-altman-greg-brockman-rogue-board/",
+                "source": "Fortune",
+                "category": "business",
+                "published_at": "2023-11-18T15:33:09+00:00",
+                "fact": "Altman\u2019s exit \u201cis indeed shocking as he has been the face of\u201d generative AI technology, said Gartner analyst Arun Chandrasekaran."
+            },
+            {
+                "title": "WTF is going on at OpenAI? We have theories",
+                "author": "Devin Coldewey",
+                "url": "https://techcrunch.com/2023/11/17/wtf-is-going-on-at-openai-sam-altman-fired/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-11-18T00:09:53+00:00",
+                "fact": "Based on the board\u2019s language and the way these giant tech companies work, this is the prevailing theory floating around right now."
+            }
+        ]
+    },
+    {
+        "query": "Do the TechCrunch article on software companies and the Hacker News article on The Epoch Times both report an increase in revenue related to payment and subscription models, respectively?",
+        "answer": "Yes",
+        "question_type": "comparison_query",
+        "evidence_list": [
+            {
+                "title": "Here\u2019s how Rainforest, a budding Stripe rival, aims to win over software companies",
+                "author": "Christine Hall",
+                "url": "https://techcrunch.com/2023/10/08/heres-how-rainforest-an-atlanta-fintech-startup-and-stripe-rival-aims-to-win-over-software-companies/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-08T14:16:01+00:00",
+                "fact": "They really just want to be able to accept payments and generate more revenue from being able to do so."
+            },
+            {
+                "title": "How the conspiracy-fueled Epoch Times went mainstream and made millions",
+                "author": null,
+                "url": "https://www.nbcnews.com/news/us-news/epoch-times-falun-gong-growth-rcna111373",
+                "source": "Hacker News",
+                "category": "technology",
+                "published_at": "2023-10-16T03:41:24+00:00",
+                "fact": "The group reported $76 million in subscription revenue in 2021, compared to nearly $7 million in 2019."
+            }
+        ]
+    },
+    {
+        "query": "Which online betting platform provides a welcome bonus of up to $1000 in bonus bets for new customers' first losses, runs NBA betting promotions, and is anticipated to extend the same sign-up offer to new users in Vermont, as reported by both CBSSports.com and Sporting News?",
+        "answer": "Caesars Sportsbook",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "2023 Kentucky online sports betting sites: Best legal sportsbooks, promos, bonuses, mobile apps, how to bet",
+                "author": "CBS Sports Staff",
+                "url": "https://www.cbssports.com/general/news/2023-kentucky-online-sports-betting-sites-best-legal-sportsbooks-promos-bonuses-mobile-apps-how-to-bet/",
+                "source": "CBSSports.com",
+                "category": "sports",
+                "published_at": "2023-10-13T21:17:17+00:00",
+                "fact": "New customers can get up to $1000 in bonus bets if they lose their first bet."
+            },
+            {
+                "title": "NBA Rookie of the Year Odds - Wembanyama the early favorite",
+                "author": "Sam Eggleston",
+                "url": "https://www.sportingnews.com/us/betting/news/nba-roty-odds/7af3a635d324b28ff4c554fd",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-10-04T22:54:23+00:00",
+                "fact": "Additionally, Caesars has a competitive welcome bonus for new players and runs NBA betting promos for existing players."
+            },
+            {
+                "title": "Vermont Sportsbook Promos and Sports Betting Launch News",
+                "author": "Martin Harris",
+                "url": "https://www.sportingnews.com/us/betting/news/vermont-sportsbook-promos/b4779ea9b7172cc57a201b0f",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-09-26T22:53:28+00:00",
+                "fact": "We expect Caesars to offer the same offer in VT is has elsewhere, with new sign-ups eligible to receive up to a $1,000 Bonus Bet if their first bet loses."
+            }
+        ]
+    },
+    {
+        "query": "Who is the individual alleged to have built a thriving crypto exchange on falsehoods and is accused by the prosecution of committing fraud for personal gain, as reported by both Fortune and TechCrunch?",
+        "answer": "Sam Bankman-Fried",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "Is Sam Bankman-Fried a bad \u2018man\u2019 or a good \u2018boy\u2019? Lawyers swap opening statements before first witnesses take the stand",
+                "author": "Ben Weiss",
+                "url": "https://fortune.com/crypto/2023/10/04/sam-bankman-fried-lawyers-opening-statements-witnesses-marc-antoine-julliard-adam-yedidia-ftx-commodities-trader-developer/",
+                "source": "Fortune",
+                "category": "business",
+                "published_at": "2023-10-04T23:32:53+00:00",
+                "fact": "But \u201call of that, all of it, was built on lies,\u201d Rehn declared to the jury."
+            },
+            {
+                "title": "Sam Altman backs teens\u2019 startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier",
+                "author": "Kyle Wiggers",
+                "url": "https://techcrunch.com/2023/10/07/sam-altman-backs-a-teens-startup-google-unveils-the-pixel-8-and-tiktok-tests-an-ad-free-tier/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-07T20:15:26+00:00",
+                "fact": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."
+            }
+        ]
+    },
+    {
+        "query": "Does the TechCrunch article on Twitch's subscription revenue split policy indicate a different monetization strategy compared to the TechCrunch article on Beeper's plans for Beeper Mini subscriptions?",
+        "answer": "Yes",
+        "question_type": "comparison_query",
+        "evidence_list": [
+            {
+                "title": "Twitch\u2019s money guy talks about the revenue split controversy and its monetization long game",
+                "author": "Morgan Sung",
+                "url": "https://techcrunch.com/2023/10/26/twitch-mike-minton-chief-monetization-officer-twitchcon-2023-partner-plus-revenue-split/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-26T22:28:10+00:00",
+                "fact": "Last year, the company announced that it would end the 70/30 subscription revenue split deal that it had offered select streamers in favor of prioritizing ad revenue."
+            },
+            {
+                "title": "Beeper Mini is back in operation after Apple\u2019s attempt to shut it down",
+                "author": "Sarah Perez",
+                "url": "https://techcrunch.com/2023/12/11/beeper-mini-is-back-in-operation-after-apples-attempt-to-shut-it-down/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-12-11T18:08:48+00:00",
+                "fact": "\u201cAs soon as things stabilize (we hope they will), we\u2019ll look at turning on subscriptions again,\u201d the blog post reads."
+            }
+        ]
+    },
+    {
+        "query": "Does 'The New York Times' article attribute the success of the Buffalo Bills' defense to the contributions of Jordan Poyer, while the 'Sporting News' article suggests that the Baltimore Ravens' defense needs to improve before their game against the Cincinnati Bengals?",
+        "answer": "Yes",
+        "question_type": "comparison_query",
+        "evidence_list": [
+            {
+                "title": "Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player",
+                "author": "The New York Times",
+                "url": "https://theathletic.com/5133811/2023/12/14/buffalo-bills-jordan-poyer-ayahuasca/",
+                "source": "The New York Times",
+                "category": "sports",
+                "published_at": "2023-12-15T21:32:52+00:00",
+                "fact": "What he has done, according to former Bills defensive coordinator Les Frazier, now an analyst for NFL Network, is enable his defense to be the best it can by lifting others through versatility, sacrifice, toughness and communication."
+            },
+            {
+                "title": "NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11",
+                "author": "Vinnie Iyer",
+                "url": "https://www.sportingnews.com/us/nfl/news/nfl-power-rankings-lions-49ers-texans-jets-patriots/7b7ee6be935efc3c735d72ac",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-11-13T21:54:00+00:00",
+                "fact": "The defense needs to pick up the pieces, too, stat, ahead of facing the Bengals on a short week."
+            }
+        ]
+    },
+    {
+        "query": "What is the name of the organization discussed in TechCrunch articles that, despite its financial instability, is recognized for creating ChatGPT, which is both a priority and a platform for ongoing innovations, and is planning to enhance its capabilities with the release of GPT-4 and associated APIs?",
+        "answer": "OpenAI",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "WTF is going on at OpenAI? We have theories",
+                "author": "Devin Coldewey",
+                "url": "https://techcrunch.com/2023/11/17/wtf-is-going-on-at-openai-sam-altman-fired/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-11-18T00:09:53+00:00",
+                "fact": "Despite being the hottest tech company in the world right now and everyone talking about ChatGPT, OpenAI isn\u2019t exactly a sound business."
+            },
+            {
+                "title": "How the OpenAI fiasco could bolster Meta and the \u2018open AI\u2019 movement",
+                "author": "Paul Sawers",
+                "url": "https://techcrunch.com/2023/11/21/how-the-openai-fiasco-could-bolster-meta-and-the-open-ai-movement/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-11-21T15:50:50+00:00",
+                "fact": "It has been a whirlwind four days for OpenAI, the generative AI poster child behind the smash hit ChatGPT."
+            },
+            {
+                "title": "One year later, ChatGPT is still alive and kicking",
+                "author": "Kyle Wiggers",
+                "url": "https://techcrunch.com/2023/11/30/one-year-later-chatgpt-is-still-alive-and-kicking/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-11-30T14:10:43+00:00",
+                "fact": "Indeed, ChatGPT became priority number one at OpenAI \u2014 not simply a one-off product but a development platform to build upon."
+            },
+            {
+                "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+                "author": "Alyssa Stringer",
+                "url": "https://techcrunch.com/2023/09/28/chatgpt-everything-to-know-about-the-ai-chatbot/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-09-28T20:03:39+00:00",
+                "fact": "OpenAI announced that GPT-4 with vision will become available alongside the upcoming launch of GPT-4 Turbo API."
+            }
+        ]
+    },
+    {
+        "query": "Which company, as reported by both TechCrunch and The Verge, has spent billions to maintain its default search engine status on various platforms and is also accused of harming news publishers\u2019 revenue through its business practices?",
+        "answer": "Google",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "5 things we learned so far about the Google antitrust case",
+                "author": "Rebecca Bellan",
+                "url": "https://techcrunch.com/2023/10/30/5-things-we-learned-so-far-about-the-google-antitrust-case/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-31T02:30:32+00:00",
+                "fact": "When Google\u2019s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports."
+            },
+            {
+                "title": "Apple defends Google Search deal in court: \u2018There wasn\u2019t a valid alternative\u2019",
+                "author": "David Pierce",
+                "url": "https://www.theverge.com/2023/9/26/23891037/apple-eddy-cue-testimony-us-google",
+                "source": "The Verge",
+                "category": "technology",
+                "published_at": "2023-09-26T17:01:22+00:00",
+                "fact": "The Justice Department is focused on the deals Google makes \u2014 with Apple but also with Samsung and Mozilla and many others \u2014 to ensure it is the default search engine on practically every platform."
+            },
+            {
+                "title": "News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line",
+                "author": "Sarah Perez",
+                "url": "https://techcrunch.com/2023/12/15/news-publisher-files-class-action-antitrust-suit-against-google-citing-ais-harms-to-their-bottom-line/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-12-15T17:56:02+00:00",
+                "fact": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+            }
+        ]
+    },
+    {
+        "query": "Does 'The Age' article suggest that Australia's Davis Cup team is aiming for an improvement in their performance compared to the previous year, while the 'Sporting News' article indicates that the South Africa national rugby team has already achieved an improvement to reach the Rugby World Cup semi-finals?",
+        "answer": "Yes",
+        "question_type": "comparison_query",
+        "evidence_list": [
+            {
+                "title": "\u2018Biggest win of my career\u2019: De Minaur, Popyrin power Australia into Davis Cup final",
+                "author": "Ian Chadband",
+                "url": "https://www.theage.com.au/sport/tennis/biggest-win-of-my-career-de-minaur-popyrin-power-australia-into-davis-cup-final-20231125-p5emr5.html?ref=rss&utm_medium=rss&utm_source=rss_sport",
+                "source": "The Age",
+                "category": "sports",
+                "published_at": "2023-11-24T23:10:22+00:00",
+                "fact": "\u201cHopefully we can go one better this year,\u201d he added, recalling the 2-0 defeat by Canada in 2022."
+            },
+            {
+                "title": "Where to watch England vs South Africa: Live stream, TV channel, lineups, odds for 2023 Rugby World Cup semifinal",
+                "author": "Jonathan Burnett",
+                "url": "https://www.sportingnews.com/us/rugby-union/news/watch-england-vs-south-africa-stream-channel-rugby-world-cup/20ce7b361138e7c1a1574572",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-10-20T22:00:05+00:00",
+                "fact": "England will no doubt be looking to echo the spirit of 2019, when they beat the All Blacks 19-7 to reach the final, but in South Africa, they face a side who have taken their game to new heights just to reach the semis."
+            }
+        ]
+    },
+    {
+        "query": "After the TechCrunch report on October 7, 2023, concerning Dave Clark's comments on Flexport, and the subsequent TechCrunch article on October 30, 2023, regarding Ryan Petersen's actions at Flexport, was there a change in the nature of the events reported?",
+        "answer": "Yes",
+        "question_type": "temporal_query",
+        "evidence_list": [
+            {
+                "title": "Sam Altman backs teens\u2019 startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier",
+                "author": "Kyle Wiggers",
+                "url": "https://techcrunch.com/2023/10/07/sam-altman-backs-a-teens-startup-google-unveils-the-pixel-8-and-tiktok-tests-an-ad-free-tier/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-07T20:15:26+00:00",
+                "fact": "Turmoil at Flexport: Dave Clark, the former Amazon executive who was ousted as CEO of Flexport just a year into the job, fired back at its founder and board, calling recent reporting on the logistics company \u201cdeeply concerning.\u201d Clark made the comments Monday in a lengthy post on social media site X following a report from CNBC that provided new information about his last days at Flexport, a freight forwarding and customs brokerage startup valued at $8 billion."
+            },
+            {
+                "title": "Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling",
+                "author": "Kirsten Korosec",
+                "url": "https://techcrunch.com/2023/10/30/cruise-hits-the-brakes-on-driverless-uaw-makes-progress-and-more-ev-backpedaling/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-10-30T10:15:24+00:00",
+                "fact": "Petersen has spent the past month cutting costs, including laying off about 20% of its workers, or about 600 people."
+            }
+        ]
+    },
+    {
+        "query": "Does 'The Independent - Life and Style' article suggesting Prince William's emotional state regarding Princess Diana's death align with the same publication's depiction of the events leading up to her death in 'The Crown season six'?",
+        "answer": "Yes",
+        "question_type": "comparison_query",
+        "evidence_list": [
+            {
+                "title": "The Crown: What is fact and what is fiction on season 6?",
+                "author": "Isobel Lewis",
+                "url": "https://www.independent.co.uk/arts-entertainment/tv/news/crown-season-6-fact-fiction-diana-b2449430.html",
+                "source": "The Independent - Life and Style",
+                "category": "entertainment",
+                "published_at": "2023-11-17T19:32:16+00:00",
+                "fact": "After learning of Diana\u2019s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family\u2019s response to it."
+            },
+            {
+                "title": "Fans react to most \u2018heartbreaking\u2019 scene in The Crown",
+                "author": "Meredith Clark",
+                "url": "https://www.independent.co.uk/life-style/royal-family/news/princess-diana-st-tropez-b2449049.html",
+                "source": "The Independent - Life and Style",
+                "category": "entertainment",
+                "published_at": "2023-11-17T09:35:32+00:00",
+                "fact": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana\u2019s fatal Paris car crash in 1997."
+            }
+        ]
+    },
+    {
+        "query": "Which entity is currently engaged with Amazon to address competition concerns, facilitating dialogue with consumer groups against Meta, deploying staff within its AI Office for future regulations, and has previously focused on illegal content and disinformation issues related to the Israel-Hamas war, as reported by TechCrunch?",
+        "answer": "European Commission",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "Amazon\u2019s iRobot purchase sucks up formal competition concerns in EU",
+                "author": "Natasha Lomas",
+                "url": "https://techcrunch.com/2023/11/27/eu-amazon-irobot-statement-of-objections/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-11-27T23:29:10+00:00",
+                "fact": "We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage."
+            },
+            {
+                "title": "European consumer groups band together to fight Meta\u2019s self-serving ad-free sub \u2014 branding it \u2018unfair\u2019 and \u2018illegal\u2019",
+                "author": "Natasha Lomas",
+                "url": "https://techcrunch.com/2023/11/29/beuc-cpc-meta-complaint/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-11-30T05:00:57+00:00",
+                "fact": "The process also loops in the European Commission to help facilitate dialogue, assess issues and bring pressure to bear on unfair practices."
+            },
+            {
+                "title": "EU says incoming rules for general purpose AIs can evolve over time",
+                "author": "Natasha Lomas",
+                "url": "https://techcrunch.com/2023/12/11/eu-ai-act-gpai-rules-evolve/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-12-11T17:57:55+00:00",
+                "fact": "And some of these staff will also be deployed within the European Commission,\u201d they added."
+            },
+            {
+                "title": "Elon Musk\u2019s X faces first DSA probe in EU over illegal content risks, moderation, transparency and deceptive UX design",
+                "author": "Natasha Lomas",
+                "url": "https://techcrunch.com/2023/12/18/x-dsa-probe/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-12-18T13:04:56+00:00",
+                "fact": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."
+            }
+        ]
+    },
+    {
+        "query": "Which company, known for its dominance in the e-reader space and for offering exclusive invite-only deals during sales events, faced a stock decline due to an antitrust lawsuit reported by 'The Sydney Morning Herald' and discussed by sellers in a 'Cnbc | World Business News Leader' article?",
+        "answer": "Amazon",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "ASX set to drop as Wall Street\u2019s September slump deepens",
+                "author": "Stan Choe",
+                "url": "https://www.smh.com.au/business/markets/asx-set-to-drop-as-wall-street-s-september-slump-deepens-20230927-p5e7v7.html?ref=rss&utm_medium=rss&utm_source=rss_business",
+                "source": "The Sydney Morning Herald",
+                "category": "business",
+                "published_at": "2023-09-26T19:11:30+00:00",
+                "fact": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."
+            },
+            {
+                "title": "78 Absolute Best October Prime Day Deals (2023)",
+                "author": "Scott Gilbertson",
+                "url": "https://www.wired.com/story/best-october-prime-day-deals-2023-5/",
+                "source": "Wired",
+                "category": "technology",
+                "published_at": "2023-10-10T14:23:00+00:00",
+                "fact": "During Prime Day this past summer, Amazon introduced invite-only deals\u2014a system to help make it easier for Prime members to access deals that are expected to sell out quickly\u2014and the company brought it back for Prime Big Deal Days."
+            },
+            {
+                "title": "Here are the best Kindle deals right now",
+                "author": "Sheena Vasani",
+                "url": "https://www.theverge.com/21539047/best-amazon-kindle-deals",
+                "source": "The Verge",
+                "category": "technology",
+                "published_at": "2023-10-16T21:40:46+00:00",
+                "fact": "Amazon, one of the pioneers of the e-reader, has dominated the space for years with its ever-expanding Kindle lineup, which consists of several unique models with their own pros and cons."
+            },
+            {
+                "title": "Amazon sellers sound off on the FTC's 'long-overdue' antitrust case",
+                "author": null,
+                "url": "https://www.cnbc.com/2023/10/06/amazon-sellers-sound-off-on-the-ftcs-long-overdue-antitrust-case.html",
+                "source": "Cnbc | World Business News Leader",
+                "category": "business",
+                "published_at": "2023-10-06T21:31:00+00:00",
+                "fact": "\u201cSelling on Amazon is a life-changing opportunity and the amount of sellers that throw stones at the platform is astounding,\u201d one user wrote."
+            }
+        ]
+    },
+    {
+        "query": "Was there no change in the portrayal of Google's influence on the digital ecosystem between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later?",
+        "answer": "no",
+        "question_type": "temporal_query",
+        "evidence_list": [
+            {
+                "title": "The people who ruined the internet",
+                "author": "Amanda Chicago Lewis",
+                "url": "https://www.theverge.com/features/23931789/seo-search-engine-optimization-experts-google-results",
+                "source": "The Verge",
+                "category": "technology",
+                "published_at": "2023-11-01T13:00:00+00:00",
+                "fact": "The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked."
+            },
+            {
+                "title": "Epic v. Google, explained",
+                "author": "Sean Hollister",
+                "url": "https://www.theverge.com/23944251/epic-google-antitrust-trial-explainer-monopoly",
+                "source": "The Verge",
+                "category": "technology",
+                "published_at": "2023-11-05T11:00:00+00:00",
+                "fact": "This whole line of argument is called \u201cmarket definition.\u201d If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google\u2019s on the road to victory."
+            },
+            {
+                "title": "News publisher files class action antitrust suit against Google, citing AI\u2019s harms to their bottom line",
+                "author": "Sarah Perez",
+                "url": "https://techcrunch.com/2023/12/15/news-publisher-files-class-action-antitrust-suit-against-google-citing-ais-harms-to-their-bottom-line/",
+                "source": "TechCrunch",
+                "category": "technology",
+                "published_at": "2023-12-15T17:56:02+00:00",
+                "fact": "The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google \u201csiphons off\u201d news publishers\u2019 content, their readers and ad revenue through anticompetitive means."
+            }
+        ]
+    },
+    {
+        "query": "Does the Sporting News article suggest that streaming services do not require a subscription for viewing the Cowboys vs. 49ers game, in contrast to the Polygon article's claim about film availability on streaming platforms without a subscription?",
+        "answer": "no",
+        "question_type": "comparison_query",
+        "evidence_list": [
+            {
+                "title": "Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game",
+                "author": "Dan Treacy",
+                "url": "https://www.sportingnews.com/us/nfl/news/cowboys-49ers-live-score-highlights-sunday-night-football/e46d8e03c6a948aa82f859c3",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-10-08T22:47:03+00:00",
+                "fact": "Fans can also stream the game via Peacock or NBCSports.com with a subscription, along with Fubo, which offers a free trial."
+            },
+            {
+                "title": "Watch great noir this Noirvember",
+                "author": "Tasha Robinson",
+                "url": "https://www.polygon.com/what-to-watch/23959772/best-noir-movies-watch-streaming-neo-noir",
+                "source": "Polygon",
+                "category": "entertainment",
+                "published_at": "2023-11-15T16:00:00+00:00",
+                "fact": "Where to watch: Streaming free with ads on Tubi, and free with a library card on Kanopy."
+            }
+        ]
+    },
+    {
+        "query": "Has the advice provided by Sporting News to bettors regarding the evaluation of betting opportunities and offers involved reading requirements, going with the favored Eagles, and focusing on hype between the reports published on September 28, 2023, and December 18, 2023?",
+        "answer": "no",
+        "question_type": "temporal_query",
+        "evidence_list": [
+            {
+                "title": "NBA Rookie of the Year Odds - Wembanyama the early favorite",
+                "author": "Sam Eggleston",
+                "url": "https://www.sportingnews.com/us/betting/news/nba-roty-odds/7af3a635d324b28ff4c554fd",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-10-04T22:54:23+00:00",
+                "fact": "We urge you to read the requirements for any available promotions and offers before accepting them so you\u2019re aware of any restrictions before betting."
+            },
+            {
+                "title": "Best sportsbook bonus offers for NFL Monday Night Football Eagles vs. Seahawks: Claim over $5,000 in bonuses from Bet365, BetMGM, BetRivers, Caesars Sportsbook, DraftKings and FanDuel\u00a0",
+                "author": "Sporting News Betting",
+                "url": "https://www.sportingnews.com/us/betting/news/best-sportsbook-bonus-offers-eagles-seahawks-mnf-bet365-betmgm-betrivers-caesars-draftkings-fanduel%C2%A0/0cac736f90d80f21daafd8a2",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-12-18T21:00:03+00:00",
+                "fact": "Since you need your moneyline bet to win to claim the $150 in bonus bets, if you\u2019re wagering on tonight\u2019s MNF game, you\u2019ll probably want to go with the favored Eagles."
+            },
+            {
+                "title": "FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4",
+                "author": "Nick Brinkerhoff",
+                "url": "https://www.sportingnews.com/us/nfl/news/best-chiefs-jets-prop-stars-bets-fanduel-kelce-swift-snf/581275901fe0e3011cdcb562",
+                "source": "Sporting News",
+                "category": "sports",
+                "published_at": "2023-09-28T21:41:00+00:00",
+                "fact": "For bettors, where there is hype, there's also an opportunity to make some money."
+            }
+        ]
+    },
+    {
+        "query": "Which company, covered by Engadget and Polygon, is set to release an updated gaming hardware with over 300 improvements on November 16, emphasizing a singular performance target for developers?",
+        "answer": "Valve",
+        "question_type": "inference_query",
+        "evidence_list": [
+            {
+                "title": "The Steam Deck OLED arrives November 16 with an improved screen and longer battery life",
+                "author": "Jessica Conditt,Aaron Souppouris",
+                "url": "https://www.engadget.com/the-steam-deck-oled-arrives-november-16-with-an-improved-screen-and-longer-battery-life-180032945.html?src=rss",
+                "source": "Engadget",
+                "category": "technology",
+                "published_at": "2023-11-09T18:00:32+00:00",
+                "fact": "Valve has announced a new Steam Deck and \u2014 double surprise \u2014 we\u2019ve already reviewed it."
+            },
+            {
+                "title": "The Steam Deck OLED improves much more than its screen",
+                "author": "Chris Plante",
+                "url": "https://www.polygon.com/reviews/23950861/steam-deck-oled-review-valve-handheld-gaming",
+                "source": "Polygon",
+                "category": "entertainment",
+                "published_at": "2023-11-09T18:00:00+00:00",
+                "fact": "Since the original Steam Deck launched, Valve has been improving the hardware through updates \u2014 its team estimates around 300 to date."
+            },
+            {
+                "title": "The Steam Deck OLED arrives November 16 with an improved screen and longer battery life",
+                "author": "Jessica Conditt,Aaron Souppouris",
+                "url": "https://www.engadget.com/the-steam-deck-oled-arrives-november-16-with-an-improved-screen-and-longer-battery-life-180032945.html?src=rss",
+                "source": "Engadget",
+                "category": "technology",
+                "published_at": "2023-11-09T18:00:32+00:00",
+                "fact": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."
+            },
+            {
+                "title": "Steam Deck OLED review: It's just better",
+                "author": "Jessica Conditt",
+                "url": "https://www.engadget.com/steam-deck-oled-review-its-just-better-180038030.html?src=rss",
+                "source": "Engadget",
+                "category": "technology",
+                "published_at": "2023-11-09T18:00:38+00:00",
+                "fact": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+            }
+        ]
+    },
+    {
+        "query": "Was there inconsistency in Jada Pinkett Smith's statements regarding what she learned from her children after The Independent - Life and Style's report on her views on self-acceptance published at 13:41:30, and before The Independent - Life and Style's subsequent report on the same topic published at 15:48:10 on the same day?",
+        "answer": "no",
+        "question_type": "temporal_query",
+        "evidence_list": [
+            {
+                "title": "Jada Pinkett Smith reveals why she and Will Smith never signed a prenup",
+                "author": "Amber Raiken",
+                "url": "https://www.independent.co.uk/life-style/jada-pinkett-will-smith-prenup-b2430529.html",
+                "source": "The Independent - Life and Style",
+                "category": "entertainment",
+                "published_at": "2023-10-16T15:48:10+00:00",
+                "fact": "This isn\u2019t the first time that Jada has opened up about her long-term commitment to her husband."
+            },
+            {
+                "title": "Jada Pinkett Smith reveals why she and Will Smith never signed a prenup",
+                "author": "Amber Raiken",
+                "url": "https://www.independent.co.uk/life-style/jada-pinkett-will-smith-prenup-b2430529.html",
+                "source": "The Independent - Life and Style",
+                "category": "entertainment",
+                "published_at": "2023-10-16T15:48:10+00:00",
+                "fact": "Jada then praised her children for how they\u2019ve helped her grow, adding: \u201cMy children, they\u2019re little gurus."
+            },
+            {
+                "title": "Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced?",
+                "author": "Amber Raiken",
+                "url": "https://www.independent.co.uk/life-style/will-smith-jada-separation-divorce-b2429576.html",
+                "source": "The Independent - Life and Style",
+                "category": "entertainment",
+                "published_at": "2023-10-16T13:41:30+00:00",
+                "fact": "She praised her and Will\u2019s two children - Jaden, 25, and Willow, 22 - for being her \u201clittle gurus\u201d throughout this time, noting that they\u2019ve taught her \u201ca deep sense of self-acceptance\u201d."
+            }
+        ]
+    }
+]
+   
