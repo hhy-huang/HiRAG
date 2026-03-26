@@ -8,6 +8,9 @@ import numpy as np
 class QueryParam:
     mode: Literal["hi_global", "hi_local", "hi_bridge", "hi_nobridge", "naive", "hi"] = "hi"
     only_need_context: bool = False
+    enable_react: bool = False
+    react_max_iter: int = 1
+    react_context_mode: Literal["second_only", "concat"] = "second_only"
     response_type: str = "Multiple Paragraphs"
     level: int = 2
     top_k: int = 20         # retrieve top-k entities

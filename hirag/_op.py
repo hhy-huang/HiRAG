@@ -1805,6 +1805,184 @@ async def _build_hilocal_query_context(
 
 
 # query functions
+async def _build_naive_query_context(
+    query,
+    chunks_vdb: BaseVectorStorage,
+    text_chunks_db: BaseKVStorage[TextChunkSchema],
+    query_param: QueryParam,
+):
+    results = await chunks_vdb.query(query, top_k=query_param.top_k)
+    if not len(results):
+        return None
+    chunks_ids = [r["id"] for r in results]
+    chunks = await text_chunks_db.get_by_ids(chunks_ids)
+    maybe_trun_chunks = truncate_list_by_token_size(
+        chunks,
+        key=lambda x: x["content"],
+        max_token_size=query_param.naive_max_token_for_text_unit,
+    )
+    logger.info(f"Truncate {len(chunks)} to {len(maybe_trun_chunks)} chunks")
+    return "--New Chunk--\n".join([c["content"] for c in maybe_trun_chunks])
+
+
+async def build_context_by_mode(
+    query,
+    knowledge_graph_inst: BaseGraphStorage,
+    entities_vdb: BaseVectorStorage,
+    community_reports: BaseKVStorage[CommunitySchema],
+    text_chunks_db: BaseKVStorage[TextChunkSchema],
+    chunks_vdb: BaseVectorStorage,
+    query_param: QueryParam,
+):
+    if query_param.mode == "hi":
+        return await _build_hierarchical_query_context(
+            query,
+            knowledge_graph_inst,
+            entities_vdb,
+            community_reports,
+            text_chunks_db,
+            query_param,
+        )
+    if query_param.mode == "hi_bridge":
+        return await _build_hibridge_query_context(
+            query,
+            knowledge_graph_inst,
+            entities_vdb,
+            community_reports,
+            text_chunks_db,
+            query_param,
+        )
+    if query_param.mode == "hi_local":
+        return await _build_hilocal_query_context(
+            query,
+            knowledge_graph_inst,
+            entities_vdb,
+            text_chunks_db,
+            query_param,
+        )
+    if query_param.mode == "hi_global":
+        return await _build_higlobal_query_context(
+            query,
+            knowledge_graph_inst,
+            entities_vdb,
+            community_reports,
+            text_chunks_db,
+            query_param,
+        )
+    if query_param.mode == "hi_nobridge":
+        return await _build_local_query_context(
+            query,
+            knowledge_graph_inst,
+            entities_vdb,
+            community_reports,
+            text_chunks_db,
+            query_param,
+        )
+    if query_param.mode == "naive":
+        if chunks_vdb is None:
+            return None
+        return await _build_naive_query_context(
+            query,
+            chunks_vdb,
+            text_chunks_db,
+            query_param,
+        )
+    raise ValueError(f"Unknown mode {query_param.mode}")
+
+
+async def rewrite_query_with_context(query: str, context: str, global_config: dict) -> str:
+    use_llm_func = global_config["cheap_model_func"]
+    rewrite_prompt = PROMPTS["react_query_rewrite"].format(
+        query=query,
+        context_data=context,
+    )
+    rewritten_query = await use_llm_func(rewrite_prompt)
+    if rewritten_query is None:
+        return ""
+    # Force one-line query output even if model returns extra text.
+    rewritten_query = rewritten_query.strip().strip('"').strip("'")
+    rewritten_query = rewritten_query.splitlines()[0].strip() if rewritten_query else ""
+    return rewritten_query
+
+
+async def hierarchical_react_query(
+    query,
+    knowledge_graph_inst: BaseGraphStorage,
+    entities_vdb: BaseVectorStorage,
+    community_reports: BaseKVStorage[CommunitySchema],
+    text_chunks_db: BaseKVStorage[TextChunkSchema],
+    chunks_vdb: BaseVectorStorage,
+    query_param: QueryParam,
+    global_config: dict,
+) -> str:
+    use_model_func = global_config["best_model_func"]
+
+    with timer():
+        context1 = await build_context_by_mode(
+            query,
+            knowledge_graph_inst,
+            entities_vdb,
+            community_reports,
+            text_chunks_db,
+            chunks_vdb,
+            query_param,
+        )
+    if context1 is None:
+        return PROMPTS["fail_response"]
+
+    current_query = query
+    latest_context = context1
+    iter_num = max(1, query_param.react_max_iter)
+
+    for _ in range(iter_num):
+        rewritten_query = await rewrite_query_with_context(current_query, latest_context, global_config)
+        if not rewritten_query:
+            break
+
+        with timer():
+            context2 = await build_context_by_mode(
+                rewritten_query,
+                knowledge_graph_inst,
+                entities_vdb,
+                community_reports,
+                text_chunks_db,
+                chunks_vdb,
+                query_param,
+            )
+        if context2 is None:
+            break
+
+        logger.info(f"[ReAct] rewrite query: {current_query} -> {rewritten_query}")
+        current_query = rewritten_query
+        latest_context = context2
+
+    if query_param.react_context_mode == "concat":
+        final_context = f"-----Search-1-----\n{context1}\n\n-----Search-2-----\n{latest_context}"
+    else:
+        final_context = latest_context
+
+    if query_param.only_need_context:
+        return final_context
+
+    response_prompt_key = "naive_rag_response" if query_param.mode == "naive" else "local_rag_response"
+    if response_prompt_key == "naive_rag_response":
+        sys_prompt = PROMPTS[response_prompt_key].format(
+            content_data=final_context,
+            response_type=query_param.response_type,
+        )
+    else:
+        sys_prompt = PROMPTS[response_prompt_key].format(
+            context_data=final_context,
+            response_type=query_param.response_type,
+        )
+
+    response = await use_model_func(
+        current_query,
+        system_prompt=sys_prompt,
+    )
+    return response
+
+
 async def hierarchical_query(
     query,
     knowledge_graph_inst: BaseGraphStorage,

@@ -28,6 +28,7 @@ from ._op import (
     hierarchical_local_query,
     hierarchical_global_query,
     hierarchical_nobridge_query,
+    hierarchical_react_query,
     naive_query,
 )
 from ._storage import (
@@ -233,7 +234,18 @@ class HiRAG:
         if param.mode == "hi_global" and not self.enable_hierachical_mode:
             raise ValueError("enable_hierachical_mode is False, cannot query in hierarchical_global mode")
 
-        if param.mode == "hi":                        # retrieve with hierarchical knowledge
+        if param.enable_react and param.mode == "hi":
+            response = await hierarchical_react_query(
+                query,
+                self.chunk_entity_relation_graph,
+                self.entities_vdb,
+                self.community_reports,
+                self.text_chunks,
+                self.chunks_vdb,
+                param,
+                asdict(self),
+            )
+        elif param.mode == "hi":                        # retrieve with hierarchical knowledge
             response = await hierarchical_query(
                 query,
                 self.chunk_entity_relation_graph,

@@ -711,6 +711,32 @@ Do not include information where the supporting evidence for it is not provided.
 {response_type}
 """
 
+PROMPTS[
+    "react_query_rewrite"
+] = """---Role---
+
+You are a query rewriting assistant for retrieval.
+
+---Goal---
+
+Rewrite the original user question into a single, retrieval-friendly question using the evidence below.
+Keep key entities, constraints, and intent unchanged.
+Do not answer the question.
+Return only one line of rewritten query text.
+
+---Original Question---
+
+{query}
+
+---Retrieved Evidence---
+
+{context_data}
+
+---Output---
+
+One rewritten query, one line only.
+"""
+
 PROMPTS["fail_response"] = "Sorry, I'm not able to provide an answer to that question."
 
 PROMPTS["process_tickers"] = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
