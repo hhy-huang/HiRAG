@@ -106,6 +106,102 @@ python batch_eval.py -m result -api openai
 python batch_eval.py -m result -api deepseek
 ```
 
+## ReAct A/B Evaluation
+
+This section is for comparing your ReAct integration with minimal setup and controllable API cost.
+
+### Goal
+
+- Group A: native `mode="hi"`
+- Group B: `mode="hi" + enable_react=True`
+- Compare:
+    - answer quality
+    - retrieval coverage (entity/path hits)
+    - latency and token cost
+
+### 1. Prerequisites
+
+Run from repository root (`HiRAG/`), because `eval/batch_eval.py` reads `config.yaml` from the current working directory.
+
+Set at least one chat API key and one embedding provider:
+
+- Chat key (any one is enough):
+    - `DEEPSEEK_API_KEY` or `GLM_API_KEY` or `OPENAI_API_KEY`
+- Embedding provider:
+    - `deepseek.embedding_model` in `config.yaml`, or
+    - `GLM_API_KEY` for GLM embedding fallback
+
+### 2. Lowest-cost smoke test (recommended first)
+
+Run only 1 query and skip external quality judge to save tokens.
+
+```shell
+cd HiRAG
+python eval/batch_eval.py \
+    -m ab_run \
+    -q ./eval/datasets/mix/mix.jsonl \
+    -o ./eval/datasets/mix/mix_eval_ab_quick.jsonl \
+    --ab_max_queries 1
+```
+
+### 3. Small batch A/B
+
+Run 3-10 queries for a more stable trend while still controlling cost.
+
+```shell
+python eval/batch_eval.py \
+    -m ab_run \
+    -q ./eval/datasets/mix/mix.jsonl \
+    -o ./eval/datasets/mix/mix_eval_ab.jsonl \
+    --ab_max_queries 5
+```
+
+### 4. Optional answer-quality judge (extra token cost)
+
+This step uses an external LLM judge on Group A/B answers.
+
+```shell
+python eval/batch_eval.py \
+    -m ab_run \
+    -q ./eval/datasets/mix/mix.jsonl \
+    -o ./eval/datasets/mix/mix_eval_ab.jsonl \
+    --ab_max_queries 5 \
+    --ab_enable_quality_judge \
+    --ab_eval_api deepseek
+```
+
+`--ab_eval_api` can be `openai`, `deepseek`, or `glm`.
+
+### 5. Output files
+
+Given `-o ./eval/datasets/mix/mix_eval_ab.jsonl`, outputs include:
+
+- `./eval/datasets/mix/mix_eval_ab_ab_result.json`
+    - Summary + per-query A/B details
+    - Coverage metrics (`entity_hits`, `path_hits`)
+    - Latency and token deltas
+    - Complex-query improvement rate
+- `./eval/datasets/mix/mix_eval_ab_groupA_hi_answer.jsonl`
+- `./eval/datasets/mix/mix_eval_ab_groupB_hi_react_answer.jsonl`
+
+If quality judge is enabled, judge result files are also generated with suffixes like `_result_deepseek.jsonl`.
+
+### 6. How to interpret effectiveness
+
+ReAct is effective if Group B shows consistent gains on complex questions in key retrieval coverage, especially:
+
+- higher `path_hits` and/or `entity_hits`
+- acceptable latency increase
+- acceptable token increase
+
+In `*_ab_result.json`, check:
+
+- `summary.complex_improved_rate`
+- `summary.avg_path_hits_a` vs `summary.avg_path_hits_b`
+- `summary.avg_entity_hits_a` vs `summary.avg_entity_hits_b`
+- `summary.avg_latency_sec_a` vs `summary.avg_latency_sec_b`
+- `summary.avg_chat_total_tokens_a` vs `summary.avg_chat_total_tokens_b`
+
 ## Results
 
 ### Compare with Naive RAG:
