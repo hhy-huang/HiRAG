@@ -2,20 +2,21 @@
 openai:
   embedding_model: "text-embedding-ada-002"
   model: "gpt-4o"
-  api_key: "***"
-  base_url: "***"
+  api_key: ""
+  base_url: ""
 
 # GLM Configuration
 glm:
   model: "glm-4-plus"
-  api_key: "***"
+  api_key: ""
   base_url: "https://open.bigmodel.cn/api/paas/v4"
   embedding_model: "embedding-3"
 
 # Deepseek Configuration
 deepseek:
   model: "deepseek-chat"
-  api_key: "***"
+  embedding_model: ""
+  api_key: ""
   base_url: "https://api.deepseek.com"
 
 # Model Parameters
@@ -26,11 +27,20 @@ model_params:
 
 # HiRAG Configuration
 hirag:
-  working_dir: "your_work_dir"
-  enable_llm_cache: false
+  working_dir: "/home/yfzhu/HiRAG/cs_work_dir_deepseek_hi/work_dir_deepseek_hi"
+  enable_llm_cache: true
   enable_hierachical_mode: true
   embedding_batch_num: 6
   embedding_func_max_async: 8
   enable_naive_rag: true
-  neo4j_url: "neo4j://localhost:****"
-  neo4j_auth: ["neo4j", "****"]
+  input_txt_path: ""
+  query: "What are the top themes in this story?"
+  compare_query: "What are the top themes in this story?"
+  mode: "hi"
+  insert_on_startup: false
+  react:
+    enable: false
+    max_iter: 1
+    context_mode: "second_only"
+  neo4j_url: "neo4j://localhost:7687"
+  neo4j_auth: ["neo4j", "password"]
